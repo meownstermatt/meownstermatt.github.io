@@ -9,10 +9,7 @@
         <link rel="icon" type="image/x-icon" href="">
         <!-- Tailwind CSS -->
         <!-- CRT Effect -->
-        <!-- Google Fonts: Source Code Pro -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        
       <link rel="stylesheet" crossorigin href="/assets/index-DtAjbgfP.css">
     </head>
     <body class="font-sourcecodepro antialiased crt">
@@ -67,19 +64,6 @@
                             <li class="indent-4"><a href="https://twitter.com/meownstermatt" target="_blank">twitter/x - don't cancel me</a></li>
                             <li class="indent-4"><a href="https://www.instagram.com/meownstermatt/" target="_blank">instagram - budget tiktok</a></li>
                             <li class="indent-4"><a href="mailto:meownstermatt@gmail.com" target="">email - only if it's important </a><button id="emailCopyToClipboard" class="text-yellow-500" type="button" onclick="emailCopyToClipboard()">[copy to clipboard]</button></li>
-                            <script>
-                                function emailCopyToClipboard() {
-                                    const emailCopyToClipboard = document.getElementById("emailCopyToClipboard")
-                                    const copyText = "meownstermatt@gmail.com";
-                                    navigator.clipboard.writeText(copyText);
-                                    emailCopyToClipboard.classList.add("text-green-500")
-                                    emailCopyToClipboard.classList.remove("text-yellow-500")
-                                    setTimeout(() => {
-                                        emailCopyToClipboard.classList.remove("text-green-500")
-                                        emailCopyToClipboard.classList.add("text-yellow-500")
-                                    }, 1000);
-                                }
-                            </script>
                         </ul>
                     </ul>
                 </div>
@@ -90,10 +74,8 @@
                     <ul>
                         <li class="indent-0">games:</li>
                         <ul>
-                            <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">game1</a></li>
-                            <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">game1</a></li>
-                            <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">game1</a></li>
-                            <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">game1</a></li>
+                            <li class="indent-4"><a href="https://itch.io/jam/monkey-jam-2023/rate/2080823" target="_blank">Monke's Cycling Adventure: Rescue Of Rat</a></li>
+                            <li class="indent-4"><a href="https://itch.io/jam/brackeys-5/rate/928911" target="_blank">Slimes Together Strong?</a></li>
                         </ul>
                     </ul>
                 </div>
@@ -101,7 +83,15 @@
                 <!-- About Command (WIP) -->
                 <div id="cmdAbout" class="hidden text-xs lg:text-base text-white">
                     <br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas cumque natus consectetur fuga deleniti vero maiores, laborum sit veritatis earum et libero aliquid dicta quidem obcaecati ut! Voluptates eius accusantium porro placeat rem officiis possimus quo cum perspiciatis necessitatibus saepe nesciunt fugiat at doloribus modi, quam distinctio veritatis cupiditate rerum amet eaque dignissimos assumenda! Architecto est, non reiciendis, quisquam porro provident doloribus qui eligendi error iure, ullam expedita fugit.</p>
+                    <p>
+                        Game Developer, VTuber & somewhat of a Gamer (that's a lie). <br>
+                        Hottest Soy Dev in the town. <br>
+                        Godot enjoyer. <br>
+                        <br>
+                        NOTES: <br>
+                        - I don't upload often, coz I scrap a lot of videos & I might be busy with other Dev stuff. <br>
+                        - While this is a Game Dev Channel, I also upload Gameplay VODs from my Twitch. <br>
+                    </p>
                 </div>
                 
                 <!-- Command Not Found -->
@@ -116,67 +106,6 @@
                     <p class="text-white">
                         ><input id="cmdText" class="px-2 w-11/12 bg-transparent placeholder:italic placeholder:text-slate-400 focus:outline-none focus:ring-transparent" type="text" name="" placeholder="what are you looking for?" autofocus>
                     </p>
-                    <script>
-                        const cmdLinks = document.getElementById("cmdLinks")
-                        const cmdGames = document.getElementById("cmdGames")
-                        const cmdAbout = document.getElementById("cmdAbout")
-                        const cmdNotFound = document.getElementById("cmdNotFound")
-                        const input = document.getElementById("cmdText")
-                        input.addEventListener("keypress", function(event) {
-                            if (event.key === "Enter") {
-                                event.preventDefault();
-                                var inputProcessed = document.getElementById("cmdText").value.replace(/\s/g, "").toLowerCase()
-                                input.value = ""
-
-                                switch (inputProcessed) {
-                                    case "meow-l":
-                                    case "meow--links":
-                                    case "sudomeow-l":
-                                    case "sudomeow--links":
-                                        cmdLinks.classList.remove("hidden")
-                                        cmdGames.classList.add("hidden")
-                                        cmdAbout.classList.add("hidden")
-                                        cmdNotFound.classList.add("hidden")
-                                        break;
-
-                                    case "meow-g":
-                                    case "meow--games":
-                                    case "sudomeow-g":
-                                    case "sudomeow--games":
-                                        cmdLinks.classList.add("hidden")
-                                        cmdGames.classList.remove("hidden")
-                                        cmdAbout.classList.add("hidden")
-                                        cmdNotFound.classList.add("hidden")
-                                        break;
-
-                                    case "meow-a":
-                                    case "meow--about":
-                                    case "sudomeow-a":                                
-                                    case "sudomeow--about":
-                                        cmdLinks.classList.add("hidden")
-                                        cmdGames.classList.add("hidden")
-                                        cmdAbout.classList.remove("hidden")
-                                        cmdNotFound.classList.add("hidden")
-                                        break;
-                                
-                                    case "clear":
-                                    case "sudoclear":
-                                        cmdLinks.classList.add("hidden")
-                                        cmdGames.classList.add("hidden")
-                                        cmdAbout.classList.add("hidden")
-                                        cmdNotFound.classList.add("hidden")
-                                        break;
-
-                                    default:
-                                        cmdLinks.classList.add("hidden")
-                                        cmdGames.classList.add("hidden")
-                                        cmdAbout.classList.add("hidden")
-                                        cmdNotFound.classList.remove("hidden")
-                                        break;
-                                }
-                            }
-                        });
-                    </script>
                 </div>
             <div>
             
@@ -185,5 +114,14 @@
 
             </div>
         </div>
+
+        <!-- Lazy Load -->
+        <!-- Google Fonts: Source Code Pro -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        
+        <!-- Js Stuff -->
+        <script src="meownsterCLI.js"></script>
     </body>
 </html>
