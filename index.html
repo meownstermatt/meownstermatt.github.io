@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Defaults -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MeownsterMatt</title>
+        <!-- Favicon (WIP) -->
+        <link rel="icon" type="image/x-icon" href="">
+        <!-- Tailwind CSS -->
+        <!-- CRT Effect -->
+        <!-- Google Fonts: Source Code Pro -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" crossorigin href="/assets/index-DtAjbgfP.css">
+    </head>
+    <body class="font-sourcecodepro antialiased crt">
+        <!-- Background Color -->
+        <div class="w-dvw h-dvh bg-gradient-to-tl from-pink-400 via-indigo-500 to-purple-600 flex place-content-center place-items-center">
+
+            <!-- Console Surface-->
+            <div class="w-dvw h-dvh md:w-7/12 md:h-3/4 md:rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/60 backdrop-blur-xl p-8">
+                
+                <!-- App Bar -->
+                <div class="flex justify-between">
+                    <!-- Name -->
+                    <div class="flex">
+                        <br>
+                        <p class="text-2xl md:text-4xl lg:text-5xl text-white">MeownsterMatt</p>
+                    </div>
+                    <!-- Min Max Close -->
+                    <div class="flex place-content-end ">
+                        <div class="md:w-4 md:h-4 md:ml-2 lg:w-6 lg:h-6 lg:ml-3 bg-green-500 rounded-2xl"></div>
+                        <div class="md:w-4 md:h-4 md:ml-2 lg:w-6 lg:h-6 lg:ml-3 bg-orange-500 rounded-2xl"></div>
+                        <div class="md:w-4 md:h-4 md:ml-2 lg:w-6 lg:h-6 lg:ml-3 bg-red-500 rounded-2xl"></div>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div id="cmdHelp" class="text-xs lg:text-base">
+                    <br>
+                    <ul class="text-slate-300">
+                        <li class="indent-0">usage: meow &lt;operation&gt; [...] </li>
+                        <li class="indent-0">operations:</p>
+                        <ul class="text-slate-300">
+                            <li class="indent-4"><a href="">meow {-l --links}</a></li>
+                            <li class="indent-4"><a href="">meow {-g --games}</a></li>
+                            <li class="indent-4"><a href="">meow {-a --about}</a></li>
+                        </ul>
+                        <li class="indent-0">note:</li>
+                        <ul>
+                            <li class="indent-4">clickable if you're scared or too lazy to type</li>        
+                        </ul>
+                    </ul>
+                </div>
+                
+                <!-- Links Command -->
+                <div id="cmdLinks" class="hidden text-xs lg:text-base text-white">
+                    <br>
+                    <ul>
+                        <li class="indent-0">links:</li>
+                        <ul>
+                            <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">youtube - watch my videos</a></li>
+                            <li class="indent-4"><a href="https://www.twitch.tv/meownstermatt" target="_blank">twitch - watch me live</a></li>
+                            <li class="indent-4"><a href="https://meownstermatt.itch.io/" target="_blank">itch.io - play my games</a></li>
+                            <li class="indent-4"><a href="https://twitter.com/meownstermatt" target="_blank">twitter/x - don't cancel me</a></li>
+                            <li class="indent-4"><a href="https://www.instagram.com/meownstermatt/" target="_blank">instagram - budget tiktok</a></li>
+                            <li class="indent-4"><a href="mailto:meownstermatt@gmail.com" target="">email - only if it's important </a><button id="emailCopyToClipboard" class="text-yellow-500" type="button" onclick="emailCopyToClipboard()">[copy to clipboard]</button></li>
+                            <script>
+                                function emailCopyToClipboard() {
+                                    const emailCopyToClipboard = document.getElementById("emailCopyToClipboard")
+                                    const copyText = "meownstermatt@gmail.com";
+                                    navigator.clipboard.writeText(copyText);
+                                    emailCopyToClipboard.classList.add("text-green-500")
+                                    emailCopyToClipboard.classList.remove("text-yellow-500")
+                                    setTimeout(() => {
+                                        emailCopyToClipboard.classList.remove("text-green-500")
+                                        emailCopyToClipboard.classList.add("text-yellow-500")
+                                    }, 1000);
+                                }
+                            </script>
+                        </ul>
+                    </ul>
+                </div>
+                
+                <!-- Games Command (WIP) -->
+                <div id="cmdGames" class="hidden text-xs lg:text-base text-white">
+                    <br>
+                    <ul>
+                        <li class="indent-0">games:</li>
+                        <ul>
+                            <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">game1</a></li>
+                            <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">game1</a></li>
+                            <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">game1</a></li>
+                            <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">game1</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                
+                <!-- About Command (WIP) -->
+                <div id="cmdAbout" class="hidden text-xs lg:text-base text-white">
+                    <br>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas cumque natus consectetur fuga deleniti vero maiores, laborum sit veritatis earum et libero aliquid dicta quidem obcaecati ut! Voluptates eius accusantium porro placeat rem officiis possimus quo cum perspiciatis necessitatibus saepe nesciunt fugiat at doloribus modi, quam distinctio veritatis cupiditate rerum amet eaque dignissimos assumenda! Architecto est, non reiciendis, quisquam porro provident doloribus qui eligendi error iure, ullam expedita fugit.</p>
+                </div>
+                
+                <!-- Command Not Found -->
+                <div id="cmdNotFound" class="hidden text-xs lg:text-base text-white">
+                    <br>
+                    <p>command not found</p>
+                </div>
+                
+                <!-- Standard Input -->
+                <div id="cmdInput" class="text-xs lg:text-base">
+                    <br>
+                    <p class="text-white">
+                        ><input id="cmdText" class="px-2 w-11/12 bg-transparent placeholder:italic placeholder:text-slate-400 focus:outline-none focus:ring-transparent" type="text" name="" placeholder="what are you looking for?" autofocus>
+                    </p>
+                    <script>
+                        const cmdLinks = document.getElementById("cmdLinks")
+                        const cmdGames = document.getElementById("cmdGames")
+                        const cmdAbout = document.getElementById("cmdAbout")
+                        const cmdNotFound = document.getElementById("cmdNotFound")
+                        const input = document.getElementById("cmdText")
+                        input.addEventListener("keypress", function(event) {
+                            if (event.key === "Enter") {
+                                event.preventDefault();
+                                var inputProcessed = document.getElementById("cmdText").value.replace(/\s/g, "").toLowerCase()
+                                input.value = ""
+
+                                switch (inputProcessed) {
+                                    case "meow-l":
+                                    case "meow--links":
+                                    case "sudomeow-l":
+                                    case "sudomeow--links":
+                                        cmdLinks.classList.remove("hidden")
+                                        cmdGames.classList.add("hidden")
+                                        cmdAbout.classList.add("hidden")
+                                        cmdNotFound.classList.add("hidden")
+                                        break;
+
+                                    case "meow-g":
+                                    case "meow--games":
+                                    case "sudomeow-g":
+                                    case "sudomeow--games":
+                                        cmdLinks.classList.add("hidden")
+                                        cmdGames.classList.remove("hidden")
+                                        cmdAbout.classList.add("hidden")
+                                        cmdNotFound.classList.add("hidden")
+                                        break;
+
+                                    case "meow-a":
+                                    case "meow--about":
+                                    case "sudomeow-a":                                
+                                    case "sudomeow--about":
+                                        cmdLinks.classList.add("hidden")
+                                        cmdGames.classList.add("hidden")
+                                        cmdAbout.classList.remove("hidden")
+                                        cmdNotFound.classList.add("hidden")
+                                        break;
+                                
+                                    case "clear":
+                                    case "sudoclear":
+                                        cmdLinks.classList.add("hidden")
+                                        cmdGames.classList.add("hidden")
+                                        cmdAbout.classList.add("hidden")
+                                        cmdNotFound.classList.add("hidden")
+                                        break;
+
+                                    default:
+                                        cmdLinks.classList.add("hidden")
+                                        cmdGames.classList.add("hidden")
+                                        cmdAbout.classList.add("hidden")
+                                        cmdNotFound.classList.remove("hidden")
+                                        break;
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            <div>
+            
+            <!-- UI Dock -->
+            <div>
+
+            </div>
+        </div>
+    </body>
+</html>
