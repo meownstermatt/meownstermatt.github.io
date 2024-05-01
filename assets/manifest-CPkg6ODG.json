@@ -1,0 +1,18 @@
+{
+    "lang": "en-us",
+    "name": "MeownsterMatt Launcher",
+    "short_name": "MeownsterMatt Launcher",
+    "description": "Download my Games from this Launcher",
+    "start_url": "/",
+    "background_color": "#1e1b4b",
+    "theme_color": "#eab308",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/MeownsterMatt.ico.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512"
+        }
+    ]
+}
