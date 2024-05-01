@@ -1,1 +1,35 @@
-const CACHE_NAME="temperature-converter-v1";self.addEventListener("install",e=>{e.waitUntil((async()=>{const e=await caches.open(CACHE_NAME);e.addAll(["/","/meownsterCLI.js"])})())}),self.addEventListener("fetch",e=>{e.respondWith((async()=>{const t=await caches.open(CACHE_NAME),a=await t.match(e.request);if(a)return a;try{const a=await fetch(e.request);return t.put(e.request,a.clone()),a}catch(e){}})())});
+const CACHE_NAME = `temperature-converter-v1`;
+
+// Use the install event to pre-cache all initial resources.
+self.addEventListener('install', event => {
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE_NAME);
+    cache.addAll([
+      '/',
+      '/meownsterCLI.js',
+    ]);
+  })());
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith((async () => {
+    const cache = await caches.open(CACHE_NAME);
+
+    // Get the resource from the cache.
+    const cachedResponse = await cache.match(event.request);
+    if (cachedResponse) {
+      return cachedResponse;
+    } else {
+        try {
+          // If the resource was not in the cache, try the network.
+          const fetchResponse = await fetch(event.request);
+
+          // Save the resource in the cache and return it.
+          cache.put(event.request, fetchResponse.clone());
+          return fetchResponse;
+        } catch (e) {
+          // The network failed.
+        }
+    }
+  })());
+});

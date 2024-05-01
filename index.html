@@ -1,1 +1,128 @@
-<!DOCTYPE html><html lang="en"><head><!-- Defaults --><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MeownsterMatt</title><meta name="theme-color" content="#eab308"><!-- Favicon (WIP) --><link rel="icon" type="image/x-icon" href="/assets/MeownsterMatt.ico-B2lEfo04.svg"><!-- PWA Manifest --><link rel="manifest" href="/assets/manifest-CPkg6ODG.json"><link rel="stylesheet" crossorigin href="/assets/index-DvWu3IoW.css"></head><body class="font-sourcecodepro antialiased crt bg-indigo-950"><!-- Console Surface--><div class="h-dvh bg-indigo-950 p-8 md:p-16 lg:p-32"><!-- App Bar --><div class="flex justify-between"><!-- Name --><div class="flex"><br><p class="text-2xl md:text-4xl lg:text-5xl text-white">MeownsterMatt</p></div></div><!-- Navigation --><div id="cmdHelp" class="text-xs lg:text-base"><br><ul class="text-slate-300"><li class="indent-0">usage: meow &lt;operation&gt; [...]</li><li class="indent-0">operations:<p></p></li><li><ul class="text-slate-300"><li class="indent-4 text-yellow-500"><button onclick="showLinks()">meow {-l --links}</button></li><li class="indent-4 text-yellow-500"><button onclick="showGames()">meow {-g --games}</button></li><li class="indent-4 text-yellow-500"><button onclick="showAbout()">meow {-a --about}</button></li></ul></li><li class="indent-0">note:</li><li><ul><li class="indent-4">clickable if you're scared or too lazy to type</li></ul></li></ul></div><!-- Links Command --><div id="cmdLinks" class="hidden text-xs lg:text-base text-white"><br><ul><li class="indent-0">links:</li><ul><li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">youtube - watch my videos</a></li><li class="indent-4"><a href="https://www.twitch.tv/meownstermatt" target="_blank">twitch - watch me live</a></li><li class="indent-4"><a href="https://meownstermatt.itch.io/" target="_blank">itch.io - play my games</a></li><li class="indent-4"><a href="https://twitter.com/intent/follow?screen_name=meownstermatt" target="_blank">twitter/x - don't cancel me</a></li><li class="indent-4"><a href="https://www.instagram.com/meownstermatt/" target="_blank">instagram - budget tiktok</a></li><li class="indent-4"><a href="mailto:meownstermatt@gmail.com" target="">email - only if it's important </a><button id="emailCopyToClipboard" class="text-yellow-500" type="button" onclick="emailCopyToClipboard()">[copy to clipboard]</button></li></ul></ul></div><!-- Games Command (WIP) --><div id="cmdGames" class="hidden text-xs lg:text-base text-white"><br><ul><li class="indent-0">games:</li><ul><li class="indent-4"><a href="https://itch.io/jam/monkey-jam-2023/rate/2080823" target="_blank">Monke's Cycling Adventure: Rescue Of Rat</a></li><li class="indent-4"><a href="https://itch.io/jam/brackeys-5/rate/928911" target="_blank">Slimes Together Strong?</a></li></ul></ul></div><!-- About Command (WIP) --><div id="cmdAbout" class="hidden text-xs lg:text-base text-white"><br><p>Game Developer, VTuber & somewhat of a Gamer (that's a lie).<br>Hottest Soy Dev in the town.<br>Godot enjoyer.<br><br>NOTES:<br>- I don't upload often, coz I scrap a lot of videos & I might be busy with other Dev stuff.<br>- While this is a Game Dev Channel, I also upload Gameplay VODs from my Twitch.<br></p></div><!-- Command Not Found --><div id="cmdNotFound" class="hidden text-xs lg:text-base text-white"><br><p>command not found</p></div><!-- Standard Input --><div id="cmdInput" class="text-xs lg:text-base"><br><p class="text-white">><input id="cmdText" class="px-2 w-11/12 bg-transparent placeholder:italic placeholder:text-slate-400 focus:outline-none focus:ring-transparent" type="text" name="" placeholder="what are you looking for?" autofocus onfocusout="focus(cmdText)" style="caret-shape:underscore"></p><p></p></div><div><!-- Lazy Load --><!-- Tailwind CSS --><!-- CRT Effect --><!-- Google Fonts: Source Code Pro --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"><!-- Js Stuff --><script src="meownsterCLI.js"></script><!-- Service Worker | Disable when in Dev --><script>"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js",{scope:"/"})</script></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Defaults -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MeownsterMatt</title>
+        <meta name="theme-color" content="#eab308">
+        <!-- Favicon (WIP) -->
+        <link rel="icon" type="image/x-icon" href="/assets/MeownsterMatt.ico-B2lEfo04.svg">
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="/assets/manifest-CPkg6ODG.json">
+        
+      <link rel="stylesheet" crossorigin href="/assets/index-DvWu3IoW.css">
+    </head>
+    <body class="font-sourcecodepro antialiased crt bg-indigo-950">
+        <!-- Console Surface-->
+        <div class="h-dvh bg-indigo-950 p-8 md:p-16 lg:p-32">
+            
+            <!-- App Bar -->
+            <div class="flex justify-between">
+                <!-- Name -->
+                <div class="flex">
+                    <br>
+                    <p class="text-2xl md:text-4xl lg:text-5xl text-white">MeownsterMatt</p>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div id="cmdHelp" class="text-xs lg:text-base">
+                <br>
+                <ul class="text-slate-300">
+                    <li class="indent-0">usage: meow &lt;operation&gt; [...] </li>
+                    <li class="indent-0">operations:</p>
+                    <li>
+                        <ul class="text-slate-300">
+                            <li class="indent-4 text-yellow-500"><button onclick="showLinks()">meow {-l --links}</button></li>
+                            <li class="indent-4 text-yellow-500"><button onclick="showGames()">meow {-g --games}</button></li>
+                            <li class="indent-4 text-yellow-500"><button onclick="showAbout()">meow {-a --about}</button></li>
+                        </ul>
+                    </li>
+                    <li class="indent-0">note:</li>
+                    <li>
+                        <ul>
+                            <li class="indent-4">clickable if you're scared or too lazy to type</li>        
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Links Command -->
+            <div id="cmdLinks" class="hidden text-xs lg:text-base text-white">
+                <br>
+                <ul>
+                    <li class="indent-0">links:</li>
+                    <ul>
+                        <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">youtube - watch my videos</a></li>
+                        <li class="indent-4"><a href="https://www.twitch.tv/meownstermatt" target="_blank">twitch - watch me live</a></li>
+                        <li class="indent-4"><a href="https://meownstermatt.itch.io/" target="_blank">itch.io - play my games</a></li>
+                        <li class="indent-4"><a href="https://twitter.com/intent/follow?screen_name=meownstermatt" target="_blank">twitter/x - don't cancel me</a></li>
+                        <li class="indent-4"><a href="https://www.instagram.com/meownstermatt/" target="_blank">instagram - budget tiktok</a></li>
+                        <li class="indent-4"><a href="mailto:meownstermatt@gmail.com" target="">email - only if it's important </a><button id="emailCopyToClipboard" class="text-yellow-500" type="button" onclick="emailCopyToClipboard()">[copy to clipboard]</button></li>
+                    </ul>
+                </ul>
+            </div>
+            
+            <!-- Games Command (WIP) -->
+            <div id="cmdGames" class="hidden text-xs lg:text-base text-white">
+                <br>
+                <ul>
+                    <li class="indent-0">games:</li>
+                    <ul>
+                        <li class="indent-4"><a href="https://itch.io/jam/monkey-jam-2023/rate/2080823" target="_blank">Monke's Cycling Adventure: Rescue Of Rat</a></li>
+                        <li class="indent-4"><a href="https://itch.io/jam/brackeys-5/rate/928911" target="_blank">Slimes Together Strong?</a></li>
+                    </ul>
+                </ul>
+            </div>
+            
+            <!-- About Command (WIP) -->
+            <div id="cmdAbout" class="hidden text-xs lg:text-base text-white">
+                <br>
+                <p>
+                    Game Developer, VTuber & somewhat of a Gamer (that's a lie). <br>
+                    Hottest Soy Dev in the town. <br>
+                    Godot enjoyer. <br>
+                    <br>
+                    NOTES: <br>
+                    - I don't upload often, coz I scrap a lot of videos & I might be busy with other Dev stuff. <br>
+                    - While this is a Game Dev Channel, I also upload Gameplay VODs from my Twitch. <br>
+                </p>
+            </div>
+            
+            <!-- Command Not Found -->
+            <div id="cmdNotFound" class="hidden text-xs lg:text-base text-white">
+                <br>
+                <p>command not found</p>
+            </div>
+            
+            <!-- Standard Input -->
+            <div id="cmdInput" class="text-xs lg:text-base">
+                <br>
+                <p class="text-white">
+                    ><input id="cmdText" class="px-2 w-11/12 bg-transparent placeholder:italic placeholder:text-slate-400 focus:outline-none focus:ring-transparent" type="text" name="" placeholder="what are you looking for?" autofocus onfocusout="focus(cmdText)" style="caret-shape: underscore;"></p>
+                </p>
+            </div>
+        <div>
+
+        <!-- Lazy Load -->
+        <!-- Tailwind CSS -->
+
+        <!-- CRT Effect -->
+
+
+        <!-- Google Fonts: Source Code Pro -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        
+        <!-- Js Stuff -->
+        <script src="meownsterCLI.js"></script>
+        <!-- Service Worker | Disable when in Dev -->
+        <!-- <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js', { scope: '/' });
+        }
+        </script> -->
+    </body>
+</html>
