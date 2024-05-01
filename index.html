@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MeownsterMatt</title>
         <meta name="theme-color" content="#eab308">
+        <meta name="description" content="Enjoy Games & Videos created by MeownsterMatt! Your favourite gamedev vtuber. Maybe.">
         <!-- Favicon (WIP) -->
-        <link rel="icon" type="image/x-icon" href="/assets/icon.svg">
+        <link rel="icon" type="image/x-icon" href="/assets/images/icon.svg">
         <!-- PWA Manifest -->
         <link rel="manifest" href="manifest.json">
         
-      <link rel="stylesheet" crossorigin href="/assets/styles.css">
     </head>
     <body class="font-sourcecodepro antialiased crt bg-indigo-950">
         <!-- Console Surface-->
@@ -22,7 +22,7 @@
                 <!-- Name -->
                 <div class="flex">
                     <br>
-                    <p class="text-2xl md:text-4xl lg:text-5xl text-white">MeownsterMatt</p>
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl text-white">MeownsterMatt</h1>
                 </div>
             </div>
             
@@ -103,26 +103,24 @@
                     ><input id="cmdText" class="px-2 w-11/12 bg-transparent placeholder:italic placeholder:text-slate-400 focus:outline-none focus:ring-transparent" type="text" name="" placeholder="what are you looking for?" autofocus onfocusout="focus(cmdText)" style="caret-shape: underscore;"></p>
                 </p>
             </div>
-        <div>
+            <div>
+                
+            <!-- Lazy Load -->
+            <!-- Final CSS -->
+            <link rel="stylesheet" crossorigin href="/assets/css/styles.css">
 
-        <!-- Lazy Load -->
-        <!-- Tailwind CSS -->
-
-        <!-- CRT Effect -->
-
-
-        <!-- Google Fonts: Source Code Pro -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-        
-        <!-- Js Stuff -->
-        <script src="meownsterCLI.js"></script>
-        <!-- Service Worker | Disable when in Dev -->
-        <script>
-        if('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/sw.js', { scope: '/' });
-        }
-        </script>
-    </body>
-</html>
+            <!-- Google Fonts: Source Code Pro -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+             
+            <!-- Js Stuff -->
+            <script src="/assets/js/meownsterCLI.js"></script>
+            <!-- Service Worker | Disable when in Dev -->
+            <!-- <script>
+                if('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('/assets/js/sw.js', { scope: '/' });
+                }
+            </script> -->
+            </body>
+            </html>
