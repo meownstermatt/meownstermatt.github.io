@@ -34,15 +34,15 @@
                     <li class="indent-0">operations:</p>
                     <li>
                         <ul class="text-slate-300">
-                            <li class="indent-4 text-yellow-500"><button onclick="showLinks()">meow {-l --links}</button></li>
-                            <li class="indent-4 text-yellow-500"><button onclick="showGames()">meow {-g --games}</button></li>
-                            <li class="indent-4 text-yellow-500"><button onclick="showAbout()">meow {-a --about}</button></li>
+                            <li class="indent-4 text-yellow-500"><button class="py-4 lg:py-0" onclick="showLinks()">meow {-l --links}</button></li>
+                            <li class="indent-4 text-yellow-500"><button class="py-4 lg:py-0" onclick="showGames()">meow {-g --games}</button></li>
+                            <li class="indent-4 text-yellow-500"><button class="py-4 lg:py-0" onclick="showAbout()">meow {-a --about}</button></li>
                         </ul>
                     </li>
                     <li class="indent-0">note:</li>
                     <li>
                         <ul>
-                            <li class="indent-4">clickable if you're scared or too lazy to type</li>        
+                            <li class="indent-4">clickables are <span class="text-yellow-500">colored</span></li>       
                         </ul>
                     </li>
                 </ul>
@@ -54,12 +54,12 @@
                 <ul>
                     <li class="indent-0">links:</li>
                     <ul>
-                        <li class="indent-4"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank">youtube - watch my videos</a></li>
-                        <li class="indent-4"><a href="https://www.twitch.tv/meownstermatt" target="_blank">twitch - watch me live</a></li>
-                        <li class="indent-4"><a href="https://meownstermatt.itch.io/" target="_blank">itch.io - play my games</a></li>
-                        <li class="indent-4"><a href="https://twitter.com/intent/follow?screen_name=meownstermatt" target="_blank">twitter/x - don't cancel me</a></li>
-                        <li class="indent-4"><a href="https://www.instagram.com/meownstermatt/" target="_blank">instagram - budget tiktok</a></li>
-                        <li class="indent-4"><a href="mailto:meownstermatt@gmail.com" target="">email - only if it's important </a><button id="emailCopyToClipboard" class="text-yellow-500" type="button" onclick="emailCopyToClipboard()">[copy to clipboard]</button></li>
+                        <li class="indent-4 py-4 lg:py-0"><a href="https://www.youtube.com/@meownstermatt?sub_confirmation=1" target="_blank"><span class="text-yellow-500">[youtube]</span> - watch my videos</a></li>
+                        <li class="indent-4 py-4 lg:py-0"><a href="https://www.twitch.tv/meownstermatt" target="_blank"><span class="text-yellow-500">[twitch]</span> - watch me live</a></li>
+                        <li class="indent-4 py-4 lg:py-0"><a href="https://meownstermatt.itch.io/" target="_blank"><span class="text-yellow-500">[itch.io]</span> - play my games</a></li>
+                        <li class="indent-4 py-4 lg:py-0"><a href="https://twitter.com/intent/follow?screen_name=meownstermatt" target="_blank"><span class="text-yellow-500">[twitter/x]</span> - don't cancel me</a></li>
+                        <li class="indent-4 py-4 lg:py-0"><a href="https://www.instagram.com/meownstermatt/" target="_blank"><span class="text-yellow-500">[instagram]</span> - budget tiktok</a></li>
+                        <li class="indent-4 py-4 lg:py-0"><a href="mailto:meownstermatt@gmail.com" target=""><span class="text-yellow-500">[email]</span> - only if it's important </a><button id="emailCopyToClipboard" class="text-yellow-500 float-right lg:float-none lg:py-0" type="button" onclick="emailCopyToClipboard()">[copy email to clipboard]</button></li>
                     </ul>
                 </ul>
             </div>
@@ -70,8 +70,8 @@
                 <ul>
                     <li class="indent-0">games:</li>
                     <ul>
-                        <li class="indent-4"><a href="https://itch.io/jam/monkey-jam-2023/rate/2080823" target="_blank">Monke's Cycling Adventure: Rescue Of Rat</a></li>
-                        <li class="indent-4"><a href="https://itch.io/jam/brackeys-5/rate/928911" target="_blank">Slimes Together Strong?</a></li>
+                        <li class="indent-4 py-4 lg:py-0 text-yellow-500"><a href="https://itch.io/jam/monkey-jam-2023/rate/2080823" target="_blank">[Monke's Cycling Adventure: Rescue Of Rat]</a></li>
+                        <li class="indent-4 py-4 lg:py-0 text-yellow-500"><a href="https://itch.io/jam/brackeys-5/rate/928911" target="_blank">[Slimes Together Strong?]</a></li>
                     </ul>
                 </ul>
             </div>
@@ -80,13 +80,18 @@
             <div id="cmdAbout" class="hidden text-xs lg:text-base text-white">
                 <br>
                 <p>
-                    Game Developer, VTuber & somewhat of a Gamer (that's a lie). <br>
-                    Hottest Soy Dev in the town. <br>
-                    Godot enjoyer. <br>
+                    ABOUT: <br>
+                    <span class="text-slate-300">
+                        Game Developer, VTuber & somewhat of a Gamer (the last one's a lie). <br>
+                        Hottest Soy Dev in the town. <br>
+                        Godot enjoyer. <br>
+                    </span>
                     <br>
                     NOTES: <br>
-                    - I don't upload often, coz I scrap a lot of videos & I might be busy with other Dev stuff. <br>
-                    - While this is a Game Dev Channel, I also upload Gameplay VODs from my Twitch. <br>
+                    <span class="text-slate-300">
+                        - I don't upload often, coz I scrap a lot of videos & I might be busy with other Dev stuff. <br>
+                        - While this is a Game Dev Channel, I also upload Gameplay VODs from my Twitch. <br>
+                    </span>
                 </p>
             </div>
             
