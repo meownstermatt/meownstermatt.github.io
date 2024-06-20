@@ -3,11 +3,9 @@ function emailCopyToClipboard() {
     const emailCopyToClipboard = document.getElementById("emailCopyToClipboard")
     const copyText = "meownstermatt@gmail.com";
     navigator.clipboard.writeText(copyText);
-    emailCopyToClipboard.classList.add("text-green-500")
-    emailCopyToClipboard.classList.remove("text-yellow-500")
+    emailCopyToClipboard.classList.add("bg-green-500")
     setTimeout(() => {
-        emailCopyToClipboard.classList.remove("text-green-500")
-        emailCopyToClipboard.classList.add("text-yellow-500")
+        emailCopyToClipboard.classList.remove("bg-green-500")
     }, 1000);
 }
 
